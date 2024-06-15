@@ -1,6 +1,7 @@
 import Counter from "./pages/Counter";
 import List from "./pages/List";
 import ShowInput from "./pages/ShowInput";
+import Timer from "./pages/Timer";
 import ToggleBtn from "./pages/ToggleBtn";
 
 function App() {
@@ -8,9 +9,10 @@ function App() {
     <>
       <div className="flex bg-slate-800 justify-center items-center w-screen h-screen text-white">
         {/* <Counter /> */}
-        <ShowInput />
+        {/* <ShowInput /> */}
         {/* <List /> */}
         {/* <ToggleBtn /> */}
+        <Timer />
       </div>
       {/* <h1>Hello World</h1> */}
     </>
