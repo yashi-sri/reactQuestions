@@ -8,6 +8,8 @@
 // import RandomQutoes from "./pages/RandomQutoes";
 // import FileUpload from "./pages/FileUpload";
 
+import Searchbar from "./pages/Searchbar";
+
 function App() {
   return (
     <>
@@ -21,6 +23,7 @@ function App() {
         {/* <BgChange /> //8 */}
         {/* <RandomQutoes /> //9 */}
         {/* <FileUpload /> //10 */}
+        <Searchbar />
       </div>
       {/* <h1>Hello World</h1>  //1*/}
     </>
