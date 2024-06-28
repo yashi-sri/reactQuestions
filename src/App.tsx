@@ -7,8 +7,10 @@
 // import Todo from "./pages/Todo";
 // import RandomQutoes from "./pages/RandomQutoes";
 // import FileUpload from "./pages/FileUpload";
+// import Searchbar from "./pages/Searchbar";
+// import  SelectColor from "./pages/SelectColor";
+import Pagination from "./pages/pagination";
 
-import Searchbar from "./pages/Searchbar";
 
 function App() {
   return (
@@ -23,7 +25,11 @@ function App() {
         {/* <BgChange /> //8 */}
         {/* <RandomQutoes /> //9 */}
         {/* <FileUpload /> //10 */}
-        <Searchbar />
+        {/*<Searchbar />   //11*/}
+      {/*<SelectColor/> //12 */}
+
+      <Pagination/>
+
       </div>
       {/* <h1>Hello World</h1>  //1*/}
     </>
