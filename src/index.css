@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.menuIcon{
+	display:none;
+}
+.mobMenu{
+	display:none;
+}
+@media screen and (max-width:600px){
+	
+.responsive{
+	display:none;
+}
+.menuIcon,.mobMenu {
+	display:flex;
+}
+
+}
+
