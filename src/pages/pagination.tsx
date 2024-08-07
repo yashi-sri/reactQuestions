@@ -1,12 +1,10 @@
+import React, { useState } from "react";
 
+const PAGE = 1;
+const LIMIT = 2;
 
-import React ,{useState} from "react"
-
-const PAGE= 1;
-const LIMIT= 2;
-
-const Pagination =()=>{
-	const [list] = useState([
+const Pagination = () => {
+  const [list] = useState([
     {
       id: 1,
       name: "Wireless Mouse",
@@ -60,39 +58,48 @@ const Pagination =()=>{
       name: "Sunglasses",
       price: 15.99,
       category: "Accessories",
-    }
+    },
   ]);
-	const [page,setPage] =useState(PAGE);
-	const [pageLength,setPagelength]= useState(Array.from({length:Math.ceil(list.length/LIMIT)}))
-	const [updatedList,setUpdateList] =useState([])
+  const [page, setPage] = useState(PAGE);
+  const [pageLength] = useState(
+    Array.from({ length: Math.ceil(list.length / LIMIT) })
+  );
+  const [updatedList, setUpdateList] = useState([]);
 
-const changePage =(val)=>{
-  setPage(val+1)
-  let temp =list;
-temp=temp.slice(val*LIMIT,(val*LIMIT)+LIMIT )
-setUpdateList(temp)
-  
-console.log()
+  const changePage = (val) => {
+    setPage(val + 1);
+    let temp = list;
+    temp = temp.slice(val * LIMIT, val * LIMIT + LIMIT);
+    setUpdateList(temp);
 
-}
+    console.log();
+  };
 
+  return (
+    <>
+      <div>
+        <ol>
+          {updatedList.map((item) => (
+            <li key={item?.id}>{item?.name} </li>
+          ))}
+        </ol>
 
-	return(
-<>
-<div> 
- <ol>
- {updatedList.map((item)=>(<li key={item?.id}>{item?.name} </li>))}
- </ol>
+        <div className="mt-3">
+          {pageLength.map((item, index) => (
+            <button
+              key={index}
+              className="border p-2"
+              onClick={() => {
+                changePage(index);
+              }}
+            >
+              {index + 1}{" "}
+            </button>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};
 
-
-<div className="mt-3" >
- {pageLength.map((item,index)=>(
-<button key={index} className="border p-2" onClick={()=>{changePage(index)}} >{index+1} </button>
- 	))}
-</div>
-</div>
- </>
-		)
-}
-
-export default Pagination
+export default Pagination;
