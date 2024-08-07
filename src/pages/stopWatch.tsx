@@ -25,19 +25,24 @@ const StopWatch = () => {
   return (
     <>
       <div>
-        <p>stop watch </p>
+        <h5 className="mt-10">stop watch </h5>
 
         <p>Time: {timeCount}</p>
-        <div className="flex gap-5">
+        <div className="flex justify-center gap-16 mt-5 ">
           <button
             onClick={() => {
               startFunction();
             }}
-            className="border Border-400-white"
+            className=" w-full py-2 rounded-md bg-gray-500 pl-3 pr-3 "
           >
             start{" "}
           </button>
-          <button onClick={stopFunction}>stop </button>
+          <button
+            onClick={stopFunction}
+            className=" w-full py-2 rounded-md bg-gray-500  pl-3 pr-3"
+          >
+            stop{" "}
+          </button>
         </div>
       </div>
     </>
