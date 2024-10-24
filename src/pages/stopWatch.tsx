@@ -22,6 +22,13 @@ const StopWatch = () => {
   }),
     [timerStatus, timeCount];
 
+  const refTimer = setTimeout(() => {
+    if (timerStatus) {
+      setTime((tieCount) => tieCount + 1);
+    }
+    return () => clearTimeout(refTimer);
+  });
+
   return (
     <>
       <div>
@@ -30,9 +37,7 @@ const StopWatch = () => {
         <p>Time: {timeCount}</p>
         <div className="flex justify-center gap-16 mt-5 ">
           <button
-            onClick={() => {
-              startFunction();
-            }}
+            onClick={startFunction}
             className=" w-full py-2 rounded-md bg-gray-500 pl-3 pr-3 "
           >
             start{" "}
