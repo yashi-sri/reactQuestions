@@ -10,10 +10,10 @@ function Trystopwatch() {
   };
   useEffect(() => {
     let reftimer = setTimeout(() => {
-      if (startStop) {
-        setTimer((time) => time + 1);
+      if (!startStop) {
+        setStartStop(!startStop);
       } else {
-        setStartStop(false);
+        setTimer((time) => time + 1);
       }
       return () => clearTimeout(reftimer);
     }, 1000);

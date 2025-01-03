@@ -18,6 +18,10 @@ import Timer from "./pages/Timer";
 import StopWatch from "./pages/stopWatch";
 import ImageWithTodo from "./pages/ImageWithTodo";
 import Trystopwatch from "./pages/trystopwatch";
+import TestComp from "./pages/TestComp";
+import Trytodo from "./pages/Trytodo";
+import UItodo from "./pages/UItodo";
+import NewTodo from "./pages/newTodo";
 
 function App() {
   return (
@@ -27,7 +31,7 @@ function App() {
         {/* <ShowInput />   //3  */}
         {/* <List />   //4 */}
         {/* <ToggleBtn /> //5 */}
-        <Timer />
+        {/* <Timer /> */}
         {/* <Todo />  //7*/}
         {/* <BgChange /> //8 */}
         {/* <RandomQutoes /> //9 */}
@@ -43,7 +47,11 @@ function App() {
 
         {/* <StopWatch />
         <ImageWithTodo /> */}
-        <Trystopwatch />
+        {/* <Trystopwatch /> */}
+        {/* <TestComp /> */}
+        {/* <Trytodo /> */}
+        {/* <UItodo /> */}
+        <NewTodo />
       </div>
       {/* <h1>Hello World</h1>  //1*/}
     </>
